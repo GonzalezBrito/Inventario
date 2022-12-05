@@ -1,0 +1,17 @@
+package inventario;
+public class Arch {
+int num;
+    String doc;
+    String esp;
+    
+    String[] docArray={"Sabritas, Doritos, Ruffles, Takis"};
+    
+    public Arch(int pNum, String pdoc){
+        num = pNum;
+        doc = pdoc;
+        
+    }
+    public String toString(){
+        return "Especialidad " + doc + " Prestigio en ventas: " + num;
+    }    
+}
