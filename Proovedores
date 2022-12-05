@@ -1,0 +1,49 @@
+package inventario;
+import java.util.*;
+
+public class Proov {
+    static ArrayList <Arch> mesp = new ArrayList<Arch>();
+    public Proov() {
+        CrearArch();
+    }
+    public void CrearArch(){
+        int i;
+        System.out.println("Consultando Datos");   //Cabe recalcar que hay mas d eun proovedor de estas botanas, por eso se agregan varios
+        for(i=0; i<8; ++i){
+            mesp.add(new Arch(i+1, "Sabritas"));
+        }
+        for(i=0; i<5; ++i){
+            mesp.add(new Arch(i+1, "Doritos"));
+               
+        }
+        for(i=0; i<5; ++i){
+            mesp.add(new Arch(i+1, "Ruffles"));
+               
+        }
+        for(i=0; i<5; ++i){
+            mesp.add(new Arch(i+1, "Takis"));
+               
+        }
+    }
+    public void despliegaProov(){
+        for (Arch iArch: mesp){
+            System.out.println(iArch.toString()+ " ");
+        }
+    }
+    public void Pro(){
+        System.out.println("\n Proovedores: ");
+        Collections.shuffle(mesp);
+    }
+
+    public void despliegaClin(){
+        for (Arch iArch: mesp){
+            System.out.println(iArch.toString()+ " ");
+        }
+    }
+    public void Clin(){
+        System.out.println("\n Clientes: ");
+        Collections.shuffle(mesp);
+    }
+}
+    
+   
