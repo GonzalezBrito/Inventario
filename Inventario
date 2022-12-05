@@ -1,0 +1,80 @@
+import inventario.Proov;
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+public class Inventario {
+    
+    static Inventario Prodc = new Inventario();
+    
+    public static void main (String[] args) {
+                Proov objInventario = new Proov();
+
+        System.out.println("Bienvenido a tu Invetario\n");
+        System.out.println("¿Que Accion Desea Realizar?\n");
+        System.out.println("------------------------------------\n");
+        System.out.println("1  Agregar un Proveedor\n");
+        System.out.println("------------------------------------\n");
+        System.out.println("2. Añardir un Producto\n");
+        System.out.println("------------------------------------\n");
+        System.out.println("3. Ver Clientes\n");
+        System.out.println("------------------------------------\n");
+        System.out.println("4. Ver Proveedores\n");
+        System.out.println("------------------------------------\n");
+        int n;
+        n = Integer.parseInt(JOptionPane.showInputDialog("Seleccione una opcion"));
+        switch(n){
+            case 1:
+                Scanner dc = new Scanner (System.in);
+                Scanner cd = new Scanner (System.in);
+                Scanner fg = new Scanner (System.in);
+                String doc, cont, esp;
+                
+                System.out.println("\n¿Cual es su nombre?");
+                doc = dc.next();
+                System.out.println("\n¿Que Productos Maneja");
+                esp = cd.next();
+                System.out.println("\nDigite una Contraseña");
+                cont = fg.next();
+                System.out.println("\nRegistro Exitoso, Ya ha sido dado de alta, ¡Buen dia! Sr. " + doc);
+                System.out.println("\nEspecialidad: " + esp);
+                break;
+            case 2:
+                Scanner dd = new Scanner (System.in);
+                Scanner gg = new Scanner (System.in);
+                String pac, pass;
+                System.out.println("\nNombre del Producto");
+                pac = dd.next();
+                System.out.println("\nMarca");
+                pass = gg.next();
+                System.out.println("\nRegistro Exitoso, Producto Añadido" + pac);
+                break;
+            case 3:
+                Scanner ok = new Scanner (System.in);
+                Scanner mo = new Scanner (System.in);
+                String us, mot;
+                System.out.println("\n¿Cual es su nombre de usuario?");
+                us = ok.next();
+                System.out.println("\nContraseña");
+                mot = mo.next();
+                objInventario.CrearArch();
+                objInventario.Clin();
+                objInventario.despliegaClin();
+                break;
+            case 4:
+                objInventario.CrearArch();
+                objInventario.Pro();
+                objInventario.despliegaProov();
+
+                break;
+                
+            default:
+                break;
+               
+        }
+        
+        
+        //Esto es todo lo que llevo por ahora, espero saque buena calificacion 
+        
+        
+    }
+}
